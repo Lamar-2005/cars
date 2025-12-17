@@ -1,0 +1,135 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0d0d2b;
+}
+
+
+.hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ff8a00, #ff6a00, #1a1a4f);
+  padding: 30px 80px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.nav-search input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+
+.hero-content {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-content h1 span {
+    position: absolute;
+    z-index: 0;
+    left: 450px;
+    font-size: 285px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 5px white;
+}
+
+.hero-car {
+  width: 650px;
+  max-width: 90%;
+  margin: 40px auto;
+  display: block;
+  filter: drop-shadow(0 40px 60px rgba(0,0,0,0.4));
+}
+
+.hero-content h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.model-wrapper {
+  z-index: 2;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: #1a1a4f;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #11113a;
+}
+
+
+.model-wrapper {
+  width: 700px;
+  height: 420px;
+  margin: 30px auto 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  --poster-color: transparent;
+  transform: scale(1.15);
+}
+
+.model-wrapper canvas {
+  width: 100% ;
+  height: 100% ;
+  display: block;
+}

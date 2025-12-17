@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+ 
+  <header class="hero">
+
+
+    <nav class="navbar">
+      <div class="logo">
+       
+        <img src="images/logo.png" alt="Logo">
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="nav-search">
+       
+        <input type="text" placeholder="Search..." />
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1>
+        MEET OUR <br />
+        <span>GX7</span>
+      </h1>
+<div class="model-wrapper">
+      
+     <model-viewer src="3d assets/model 1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+</div>
+      <a href="#" class="btn-primary">Explore More</a>
+    </div>
+
+  </header>
+
+</body>
+</html>
