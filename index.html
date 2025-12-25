@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Car Website</title>
+  <title>Voltora Motors - Premium Automotive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jura:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
@@ -11,50 +14,266 @@
 
  
   <header class="hero">
-
-
     <nav class="navbar">
       <div class="logo">
-       
-        <img src="images/logo.png" alt="Logo">
+        <img src="images/logo.png" alt="Logo"> 
       </div>
-
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-
       <div class="nav-search">
-       
         <input type="text" placeholder="Search..." />
       </div>
     </nav>
 
     <div class="hero-content">
-      <h1>
-        MEET OUR <br />
-        <span>GX7</span>
-      </h1>
-<div class="model-wrapper">
+      <div class="hero-title-wrapper">
+        <h1 class="outline-text">GX7</h1>
+        <h2 class="main-title">MEET OUR</h2>
+      </div>
       
-     <model-viewer src="3d assets/model 1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+      <div class="model-wrapper">
+        
+        <model-viewer src="3d assets/model 1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+          <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+        </model-viewer>
+      </div>
+      
+      <a href="#" class="btn-primary">Explore More</a>
+    </div>
+  </header>
+
+
+  <section class="service-section">
+    <div class="service-text">
+      <h2>AUTO MAINTENANCE<br>AND REPAIR SERVICES</h2>
+      <p>
+        Voltora Motors offers comprehensive auto maintenance and repair services
+        designed to keep every vehicle performing at its best. Our certified
+        technicians use advanced diagnostic tools and high-quality parts to ensure
+        reliable, long-lasting results.
+      </p>
+      <a href="#" class="btn-orange">Book service →</a>
+    </div>
+    <div class="model-wrapper">
+      <model-viewer src="3d assets/model 2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
     <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+    </div>
+  </section>
+
+  <div class="checkered-divider"></div>
+
+
+<section class="car-carousel-section">
+  <h2 class="section-title">FEATURED CARS</h2>
+
+  <div class="carousel-container">
+    
+    <button class="arrow-btn prev" aria-label="Previous">
+      &#10094;
+    </button>
+
+    <div class="cards-wrapper">
+     
+      <div class="car-card">
+        <div class="card-header">
         
+          <img src="images/tesla logo.png" class="brand-logo" alt="Tesla">
+        
+          <a href="#" class="explore-btn">
+            <img src="images/arrow.png" alt="">
+          </a>
+        </div>
+
+        <h3>Tesla Model 3</h3>
+        <p>Electric Performance Sedan</p>
+
+   
+        <img src="images/tesla model.png" class="car-img" alt="Tesla Model 3">
+      </div>
+
+      
+      <div class="car-card">
+        <div class="card-header">
+          <img src="images/bmw logo.png" class="brand-logo" alt="BMW">
+          <a href="#" class="explore-btn">
+            <img src="images/arrow.png" alt="">
+          </a>
+        </div>
+
+        <h3>BMW X5</h3>
+        <p>Luxury Mid-Size SUV</p>
+
+        <img src="images/bwm model.png" class="car-img" alt="BMW X5">
+      </div>
+    </div>
+
+    <button class="arrow-btn next" aria-label="Next">
+      &#10095;
+    </button>
+  </div>
+</section>
+
+  <section class="porsche-section">
+    <div class="porsche-bg-text">newstv.porsche.com<br><span>information. intensified.</span></div>
+ 
+    <h2 class="porsche-title">NEWEST PORSCHE 911</h2>
+    
+    <div class="porsche-interactive">
+      <div class="radar-circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      
+      
+   <div class="model-viewer">
+    <model-viewer src="3d assets/porche model 1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
     </button>
     <div id="ar-prompt">
         <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
     </div>
 </model-viewer>
 </div>
-      <a href="#" class="btn-primary">Explore More</a>
+   
+      <div class="feature-tag t1">AI-Powered Systems <span></span></div>
+      <div class="feature-tag t2">Connected Experience <span></span></div>
+      <div class="feature-tag t3">Augmented Reality <span></span></div>
+      <div class="feature-tag t4">360° Safety Suite <span></span></div>
+      <div class="feature-tag t5">Performance Tuning <span></span></div>
+      <div class="feature-tag t6">Electric Innovation <span></span></div>
     </div>
 
-  </header>
+    <div class="porsche-btns">
+      <a href="#" class="btn-orange">Explore more &nearr;</a>
+      <a href="#" class="btn-outline">View Interior</a>
+    </div>
+  </section>
 
+ 
+  <section class="stats-bar">
+    <div class="stat-item"><h3>500+</h3><p>Engineering Hours</p></div>
+    <div class="stat-item"><h3>15+</h3><p>Safety Features</p></div>
+    <div class="stat-item"><h3>98%</h3><p>Customer Satisfaction</p></div>
+    <div class="stat-item"><h3>24/7</h3><p>Connected Support</p></div>
+  </section>
+
+
+  <section class="partners-section">
+    <h2 class="partner-title">PARTNER COMPANIES</h2>
+    <div class="partners-logos">
+      <img src="images/bmw logo.png" alt="BMW">
+      <img src="images/tesla logo.png" alt="Tesla">
+      <img src="images/mercedes logo.png" alt="Mercedes">
+      <img src="images/porche logo.png" alt="Porsche">
+      <img src="images/toyota logo.png" alt="Toyota">
+      <img src="images/chevorlet logo.png" alt="Chevrolet">
+    </div>
+  </section>
+
+  <div class="checkered-divider"></div>
+
+ <section class="car-carousel-section">
+    <h2 class="section-title">MOST PURCHASED CARS</h2>
+    <div class="carousel-container">
+        <button class="arrow-btn prev" onclick="moveSlide('purchased', -1)">&#10094;</button>
+        
+        <div class="carousel-viewport">
+            <div class="carousel-track" id="purchased-track">
+                <div class="car-card">
+                    <div class="card-header">
+                        <img src="images/toyota-logo.png" class="brand-logo" alt="Toyota">
+                        <a href="#" class="explore-btn"><img src="images/arrow-up.png" alt=""></a>
+                    </div>
+                    <h3>Toyota Corolla</h3>
+                    <p>Efficient Compact</p>
+                    <img src="images/toyota-corolla.png" class="car-img" alt="Toyota">
+                </div>
+                <div class="car-card">
+                    <div class="card-header">
+                        <img src="images/ford-logo.png" class="brand-logo" alt="Ford">
+                        <a href="#" class="explore-btn"><img src="images/arrow-up.png" alt=""></a>
+                    </div>
+                    <h3>Ford F-series</h3>
+                    <p>Modern Compact</p>
+                    <img src="images/ford-f150.png" class="car-img" alt="Ford">
+                </div>
+            </div>
+        </div>
+
+        <button class="arrow-btn next" onclick="moveSlide('purchased', 1)">&#10095;</button>
+    </div>
+</section>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <p class="subtitle">GET IN TOUCH</p>
+      <h2>Experience Voltora</h2>
+      <p>Visit our showroom, schedule a test drive, or connect with our team to learn more about how Voltora Motors is redefining automotive excellence in Egypt and beyond.</p>
+      
+      <div class="info-item">
+        <strong>Visit Our Showroom</strong>
+        <p>Industrial Zone, New Cairo, Egypt</p>
+      </div>
+      <div class="info-item">
+        <strong>Call Us</strong>
+        <p>+20 2 1234 5678</p>
+      </div>
+      <div class="info-item">
+        <strong>Email Us</strong>
+        <p>contact@voltoramotors.eg</p>
+      </div>
+      
+      <div class="social-links">
+        <a href="#">f</a> <a href="#">t</a> <a href="#">ig</a> <a href="#">in</a>
+      </div>
+    </div>
+
+    <div class="contact-form-container">
+      <h3>Request Information</h3>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="First Name" value="John">
+          <input type="text" placeholder="Last Name" value="Doe">
+        </div>
+        <input type="email" placeholder="Email" value="john.doe@example.com">
+        <input type="text" placeholder="Phone" value="+20 123 456 7890">
+        <select>
+          <option>Interested In</option>
+        </select>
+        <textarea placeholder="Message">Tell us about your interest...</textarea>
+        <button type="submit" class="btn-submit"></button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Voltora Logo" class="footer-logo">
+      <p>© 2025 Voltora Motors. Driving Egypt's Automotive Future.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Careers</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
