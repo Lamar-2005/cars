@@ -1,236 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voltora Motors - Tesla Model Y</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voltora Motors - Premium Automotive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="cars.css">
-  <!-- Model Viewer for your 3D assets -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jura:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cars.css" />
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <div class="logo"><img src="images/logo.png" alt="Logo"></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <div class="nav-search">
-      <input type="text" placeholder="Search...">
-    </div>
-  </nav>
+    <header>
+     <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo"> 
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav-search">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </nav>
+    </header>
 
-  <!-- HERO SECTION -->
-  <header class="hero-details">
-    <div class="hero-text-content">
-      <h1>Tesla Model Y</h1>
-      <span class="badge">MID-SIZE SUV</span>
-    </div>
+    <main>
+       
+
+    <section class="hero">
+        <div class="hero-text-wrapper">
+            <h1>Tesla Model Y</h1>
+            <span class="badge">NEW 2025 MODEL</span>
+        </div>
+
+        <div class="main-car-container">
+            <div class="model-wrapper">
+               
+                <model-viewer 
+                    id="main-car-viewer"
+                    src="3d assets/porche model 1.glb" 
+                    ar ar-modes="webxr scene-viewer quick-look" 
+                    camera-controls 
+                    tone-mapping="neutral" 
+                    shadow-intensity="1"
+                    camera-orbit="0deg 75deg 45%" 
+                    field-of-view="30deg"
+                    interpolation-decay="200"
+                    min-camera-orbit="auto auto 5%"
+                    max-camera-orbit="auto auto 100%">
+                    
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                </model-viewer>
+            </div>
+        </div>
+        
+      <div class="color-picker-sidebar">
     
-    <div class="main-visual-container">
-     <div class="model-viewer">
-    <model-viewer src="3d assets/porche model 1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate>
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-    </div>
-</model-viewer>
-      <div class="model-placeholder">
-        <img src="images/tesla-y-main.png" alt="Tesla Model Y Main">
+    <div class="dot grey active" onclick="changeColor('grey', this)"></div>
+    <div class="dot red" onclick="changeColor('red', this)"></div>
+    <div class="dot white" onclick="changeColor('white', this)"></div>
+</div>
+    </section>
+</main>
+
+       
+        <div class="details-tab-wrapper">
+            <div class="details-tab">Car Details</div>
+        </div>
         
-      </div>
+        <section class="car-details-orange">
+            <div class="details-grid">
+                <div class="detail-item"><img src="images/EXTERIOR.png" alt="Exterior"><p>EXTERIOR 2</p></div>
+                <div class="detail-item"><img src="images/wheels.png" alt="Wheels"><p>WHEELS</p></div>
+                <div class="detail-item"><img src="images/interior.png" alt="Interior"><p>INTERIOR 1</p></div>
+            </div>
+        </section>
 
-  
-      <div class="color-picker">
-        <div class="color-dot grey active"></div>
-        <div class="color-dot red"></div>
-        <div class="color-dot white"></div>
-      </div>
-    </div>
-  </header>
-
- 
-  <section class="gallery-section">
-    <div class="section-header-orange">
-      <h2>Car Details</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/EXTERIOR.png" alt="Exterior 2">
-        <p>EXTERIOR 2</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/wheels.png" alt="Wheels">
-        <p>WHEELS</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/interior.png" alt="Interior 1">
-        <p>INTERIOR 1</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="info-section">
-    <div class="info-container">
-      <div class="info-image">
-        <img src="images/vt7-side.png" alt="VT-7 Sport View">
-      </div>
-      <div class="info-content">
-        <h2>VT-7 SPORT</h2>
-        <p class="subtitle">High-Performance Electric Sedan</p>
-        
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span class="icon">🐎</span>
-            <div><h3>560</h3><p>hp</p></div>
-          </div>
-          <div class="stat-card">
-            <span class="icon">⚡</span>
-            <div><h3>3.3s</h3><p>0-60</p></div>
-          </div>
-          <div class="stat-card">
-            <span class="icon">🏁</span>
-            <div><h3>250</h3><p>km/h</p></div>
-          </div>
-          <div class="stat-card">
-            <span class="icon">🔋</span>
-            <div><h3>441</h3><p>miles</p></div>
-          </div>
+       
+      <section class="vt7-section">
+    <div class="vt7-layout">
+     
+        <div class="vt7-video-container">
+            <video autoplay loop muted playsinline class="tilted-video">
+                <source src="teslavid.mp4" type="video/mp4">
+              
+            </video>
+            
+            <div class="video-overlay"></div>
         </div>
 
-        <div class="price-card">
-          <div class="price-left">
-            <h3>$65,000</h3>
-            <p>Starting Price</p>
-          </div>
-          <div class="price-right">
-            <p>MSRP</p>
-            <p>$1,200/mo</p>
-          </div>
+        <div class="vt7-content">
+            <h2 class="glow-text">VT-7 SPORT</h2>
+            <p class="tagline">High-Performance • Electric Future</p>
+            
+            <div class="vt7-stats-grid">
+                <div class="stat-big"><i class="fa fa-tachometer-alt"></i><b>500</b><small>HP</small></div>
+                <div class="stat-big"><i class="fa fa-bolt"></i><b>3.5s</b><small>0-100</small></div>
+                <div class="stat-big"><i class="fa fa-wind"></i><b>290</b><small>KM/H</small></div>
+                <div class="stat-big"><i class="fa fa-users"></i><b>4+1</b><small>SEATS</small></div>
+            </div>
+
+            <div class="price-glow-box">
+                <div class="p-left">
+                    <small>STARTING FROM</small>
+                    <h3>$65,000</h3>
+                    <p>60 months financing available</p>
+                </div>
+                <div class="p-right">
+                    <small>Monthly</small>
+                    <strong>$1,250</strong>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button class="btn-solid"><i class="fa fa-calendar-check"></i> Test Drive</button>
+                <button class="btn-border"><i class="fa fa-phone"></i> Contact</button>
+            </div>
         </div>
-
-        <div class="action-btns">
-          <a href="#" class="btn-primary-orange">Test Drive</a>
-          <a href="#" class="btn-outline-white">Contact</a>
-        </div>
-      </div>
     </div>
-  </section>
-
-
-  <section class="perf-specs-section">
-    <h2>Performance Specifications</h2>
-    <div class="perf-grid">
-      <div class="perf-box">
-        <span class="icon">⏲️</span>
-        <h3>500 HP</h3>
-        <p>Maximum Power Delivery</p>
-      </div>
-      <div class="perf-box">
-        <span class="icon">⚡</span>
-        <h3>3.5s</h3>
-        <p>Instant Acceleration</p>
-      </div>
-      <div class="perf-box">
-        <span class="icon">⚙️</span>
-        <h3>290</h3>
-        <p>Top Gear Ratio</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="checkered-divider"></div>
-
-
-  <section class="overview-section">
-    <div class="overview-container">
-      <h2>Vehicle Overview</h2>
-      <p class="overview-desc">The VT-7 Sport represents the pinnacle of electric engineering, excellence, and performance. This high-performance electric sedan combines breathtaking power with refined luxury and cutting-edge technology.</p>
+</section>
       
-      <div class="overview-lists">
-        <div class="list-column">
-          <h3>Key Highlights</h3>
-          <ul>
-            <li>Dual Motor All-Wheel Drive</li>
-            <li>Adaptive Air Suspension</li>
-            <li>Carbon Fiber Interior</li>
-            <li>Glass Roof Panoramic</li>
-            <li>Carbon Ceramic Brakes</li>
-          </ul>
-        </div>
-        <div class="list-column">
-          <h3>Standard Features</h3>
-          <ul>
-            <li>Premium Audio System</li>
-            <li>21" Turbine Wheels</li>
-            <li>Advanced Autopilot</li>
-            <li>Wireless Charging</li>
-            <li>Premium Connectivity</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        <section class="perf-orange">
+            <h2>Performance Specifications</h2>
+            <div class="perf-dark-grid">
+                <div class="perf-card-dark"><i class="fa fa-tachometer-alt"></i><h3>500 HP</h3><p>Maximum Power Output</p></div>
+                <div class="perf-card-dark"><i class="fa fa-bolt"></i><h3>3.5s</h3><p>0-100 km/h acceleration</p></div>
+                <div class="perf-card-dark"><i class="fa fa-cog"></i><h3>290</h3><p>Top Speed (km/h)</p></div>
+            </div>
+        </section>
 
-
-    <div class="safety-container">
-      <h2>Safety & Driver Assistance</h2>
-      <div class="safety-grid">
-        <div class="safety-col">
-          <h3>Active Safety</h3>
-          <div class="safety-item">Collision Avoidance</div>
-          <div class="safety-item">Lane Departure Warning</div>
-          <div class="safety-item">Blind Spot Monitoring</div>
-          <div class="safety-item">Emergency Braking</div>
-        </div>
-        <div class="safety-col">
-          <h3>Passive Safety</h3>
-          <div class="safety-item">Side Impact Protection</div>
-          <div class="safety-item">Advanced Airbags</div>
-          <div class="safety-item">Reinforced Structure</div>
-          <div class="safety-item">Child Safety Seats</div>
-        </div>
-      </div>
       
-      <div class="safety-rating-bar">
-        <div class="stars">★★★★★</div>
-        <p>5-Star Euro NCAP Safety Rating</p>
-      </div>
-    </div>
-  </section>
+        <div class="stripes-divider">
+            <div class="stripe s1"></div>
+            <div class="stripe s2"></div>
+        </div>
 
+        <section class="overview-section">
+            <div class="content-card">
+                <h2>Vehicle Overview</h2>
+                <p class="overview-text">The VT-7 Sport represents the pinnacle of automotive engineering excellence. Designed and manufactured in Egypt, this high-performance sedan combines breathtaking power with refined luxury and cutting-edge technology.</p>
+                
+                <div class="overview-lists">
+                   
+                    <div class="info-sub-box">
+                        <h4>Key Highlights</h4>
+                        <div class="feature-grid">
+                            <div class="feature-box">Twin Turbo V8 Engine</div>
+                            <div class="feature-box">All-Wheel Drive System</div>
+                            <div class="feature-box">Carbon Fiber Accents</div>
+                            <div class="feature-box">Sport-Tuned Suspension</div>
+                            <div class="feature-box">Premium Nappa Leather</div>
+                        </div>
+                    </div>
+               
+                    <div class="info-sub-box">
+                        <h4>Standard Features</h4>
+                        <div class="feature-grid">
+                            <div class="feature-box">15" Touchscreen Display</div>
+                            <div class="feature-box">360° Camera System</div>
+                            <div class="feature-box">Adaptive Cruise Control</div>
+                            <div class="feature-box">Wireless Charging</div>
+                            <div class="feature-box">Premium Sound System</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="contact-section">
-    <div class="contact-info">
-      <p class="subtitle">GET IN TOUCH</p>
-      <h2>Experience Voltora</h2>
-      <p>Visit our showroom, schedule a test drive, or connect with our team.</p>
-      <div class="info-item"><strong>Visit Our Showroom</strong><p>Industrial Zone, New Cairo, Egypt</p></div>
-      <div class="info-item"><strong>Call Us</strong><p>+20 2 1234 5678</p></div>
-      <div class="info-item"><strong>Email Us</strong><p>contact@voltoramotors.eg</p></div>
-    </div>
-    <div class="contact-form-container">
-      <h3>Request Information</h3>
-      <form>
-        <div class="form-row"><input type="text" placeholder="First Name"><input type="text" placeholder="Last Name"></div>
-        <input type="email" placeholder="Email"><input type="text" placeholder="Phone">
-        <select><option>Interested In</option></select>
-        <textarea placeholder="Message"></textarea>
-        <button type="submit" class="btn-submit">Submit</button>
-      </form>
-    </div>
-  </section>
+     
+        <section class="safety-area">
+            <div class="content-card">
+                <h2>Safety & Driver Assistance</h2>
+                <div class="safety-grid">
+                    <div class="safety-column">
+                        <h4>Active Safety</h4>
+                        <div class="safe-box">Adaptive Cruise Control</div>
+                        <div class="safe-box">Lane Keep Assist</div>
+                        <div class="safe-box">Blind Spot Detection</div>
+                    </div>
+                    <div class="safety-column">
+                        <h4>Passive Safety</h4>
+                        <div class="safe-box">8 Advanced Airbags</div>
+                        <div class="safe-box">Reinforced Structure</div>
+                        <div class="safe-box">ISOFIX Child Seats</div>
+                    </div>
+                </div>
+                <div class="orange-star-bar">
+                    <div class="stars-centered">★★★★★</div>
+                    <p>5-Star Euro NCAP Safety Rating</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience-section">
+            <div class="exp-content">
+                <small class="label orange-text">GET IN TOUCH</small>
+                <h2>Experience Voltora</h2>
+                <p>Visit our showroom, schedule a test drive, or connect with our team to learn more about how Voltora Motors is redefining automotive excellence.</p>
+                
+                <div class="contact-info-list">
+                    <div class="info-item">
+                        <div class="icon-circle"><i class="fa fa-map-marker-alt"></i></div>
+                        <div><strong>Visit Our Showroom</strong><p>Industrial Zone, New Cairo, Egypt</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-circle"><i class="fa fa-phone"></i></div>
+                        <div><strong>Call Us</strong><p>+20 2 1234 5678</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-circle"><i class="fa fa-envelope"></i></div>
+                        <div><strong>Email Us</strong><p>contact@voltoramotors.eg</p></div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <p>Follow Our Journey</p>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <h3>Request Information</h3>
+                <form>
+                    <div class="form-row">
+                        <div class="input-group"><label>First Name</label><input type="text" placeholder="John"></div>
+                        <div class="input-group"><label>Last Name</label><input type="text" placeholder="Doe"></div>
+                    </div>
+                    <div class="input-group"><label>Email</label><input type="email" placeholder="john.doe@example.com"></div>
+                    <div class="input-group"><label>Phone</label><input type="text" placeholder="+20 123 456 7890"></div>
+                    <div class="input-group"><label>Interested In</label><input type="text" placeholder="VT-7 Sport"></div>
+                    <div class="input-group"><label>Message</label><textarea placeholder="Tell us about your interest..."></textarea></div>
+                    <button type="submit" class="submit-btn">SUBMIT REQUEST</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Voltora Motors. Driving Egypt's Automotive Future</p>
+        <div class="foot-links"><span>Privacy</span><span>Terms</span><span>Careers</span></div>
+    </footer>
+
+     <script src="script.js"></script>
 </body>
 </html>

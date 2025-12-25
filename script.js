@@ -77,3 +77,26 @@ modelViewer.addEventListener("load", () => {
     });
   });
 });
+
+    function changeColor(colorKey, element) {
+       
+        const modelViewer = document.getElementById('main-car-viewer');
+        
+       
+        const modelMap = {
+            'grey': '3d assets/porche model 1.glb', 
+            'red': '3d assets/porche model red.glb',
+            'white': '3d assets/porche model white.glb'
+        };
+
+    
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach(dot => dot.classList.remove('active'));
+        element.classList.add('active');
+
+       
+        if (modelMap[colorKey]) {
+        
+            modelViewer.src = modelMap[colorKey];
+        }
+    }
