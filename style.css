@@ -9,10 +9,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: 'Jura', sans-serif; 
 }
-
 
 input, select, textarea, button {
   font-family: 'Jura', sans-serif;
@@ -24,11 +22,11 @@ body {
   overflow-x: hidden;
 }
 
-
+/* Hero Section */
 .hero {
   min-height: 100vh;
   background: radial-gradient(circle at center, #ff8a00 0%, #ff6a00 30%, #1a1a4f 80%);
-  padding: 30px 80px;
+  padding: 20px;
   position: relative;
 }
 
@@ -38,12 +36,15 @@ body {
   justify-content: space-between;
   z-index: 10;
   position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -58,6 +59,8 @@ body {
   border: none;
   background: rgba(255, 255, 255, 0.2);
   color: white;
+  width: 100%;
+  max-width: 200px;
 }
 
 .hero-content {
@@ -68,14 +71,14 @@ body {
 
 .hero-title-wrapper {
   position: relative;
-  height: 250px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .outline-text {
-  font-size: 250px;
+  font-size: 80px;
   font-weight: 900;
   color: transparent;
   -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
@@ -87,7 +90,7 @@ body {
 }
 
 .main-title {
-  font-size: 50px;
+  font-size: 28px;
   position: relative;
   z-index: 2;
   letter-spacing: 2px;
@@ -95,8 +98,8 @@ body {
 
 .model-wrapper {
   width: 100%;
-  height: 450px;
-  margin-top: -80px;
+  height: 300px;
+  margin-top: -40px;
   z-index: 3;
 }
 
@@ -115,17 +118,17 @@ model-viewer {
   margin-top: 20px;
 }
 
-
+/* Service Section */
 .service-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 100px 80px;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 20px;
   background: linear-gradient(180deg, transparent 0%, var(--dark-blue) 100%);
 }
 
 .service-text h2 {
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -134,7 +137,7 @@ model-viewer {
   font-size: 14px;
   opacity: 0.8;
   margin-bottom: 30px;
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .btn-orange {
@@ -146,7 +149,8 @@ model-viewer {
   border-radius: 4px;
   font-weight: 600;
 }
-.service-image{
+
+.service-image {
   width: 100%;
 }
 
@@ -161,71 +165,81 @@ model-viewer {
   background-color: #fff;
 }
 
-
+/* Car Carousel Section */
 .car-carousel-section {
   background-color: #ff7a00;
-  padding: 70px 0 80px;
+  padding: 50px 20px;
   text-align: center;
 }
-.carousel-viewport {
-  width: 960px; 
-  overflow: hidden;
-}
-.carousel-track {
-  display: flex;
-  gap: 30px;
-}
-
 
 .section-title {
   color: #0d0d2b;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
-
 
 .carousel-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
+.carousel-viewport {
+  width: 100%;
+  max-width: 960px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
 
 .arrow-btn {
   background: none;
   border: none;
   color: white;
-  font-size: 42px;
+  font-size: 32px;
   cursor: pointer;
-  padding: 0 25px;
+  padding: 0 15px;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .arrow-btn:hover {
   color: #0d0d2b;
 }
 
-
 .cards-wrapper {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
-
 
 .car-card {
   background-color: #0d0d2b;
-  width: 460px;
-  padding: 28px 30px 30px;
+  width: 100%;
+  min-width: 280px;
+  max-width: 460px;
+  padding: 20px;
   border-radius: 4px;
   text-align: left;
   color: white;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
+.car-card:hover {
+  transform: scale(1.05); 
+  z-index: 10; 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
 
 .card-header {
   display: flex;
@@ -235,64 +249,9 @@ model-viewer {
 }
 
 .brand-logo {
-height: 65px;
+  height: 50px;
 }
 
-.explore-btn {
-  width: 34px;
-  height: 34px;
-  background-color: #fff6c7;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.explore-btn img {
-  width: 14px;
-}
-
-
-.car-card h3 {
-  font-size: 21px;
-  margin-bottom: 6px;
-}
-
-.car-card p {
-  font-size: 14px;
-  opacity: 0.7;
-  margin-bottom: 22px;
-}
-
-
-.car-img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-}
-/* Existing card styles with added transition */
-.car-card {
-  background-color: #0d0d2b;
-  width: 460px;
-  padding: 28px 30px 30px;
-  border-radius: 4px;
-  text-align: left;
-  color: white;
-  
-  /* ADD THESE FOR THE HOVER EFFECT */
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-/* THE HOVER EFFECT: Makes the car bigger */
-.car-card:hover {
-  transform: scale(1.05); /* Increases size by 5% */
-  z-index: 10; /* Ensures it stays on top of arrows/other cards */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* BUTTON HOVER EFFECT */
 .explore-btn {
   width: 34px;
   height: 34px;
@@ -306,87 +265,76 @@ height: 65px;
 }
 
 .explore-btn:hover {
-  background-color: #ff7a00; /* Changes to your theme orange on hover */
-  transform: rotate(-45deg); /* Optional: rotates the arrow slightly like an interaction */
+  background-color: #ff7a00; 
+  transform: rotate(-45deg); 
 }
 
-/* Ensure the image inside the card scales nicely */
+.explore-btn img {
+  width: 14px;
+}
+
+.car-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.car-card p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 22px;
+}
+
 .car-img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: contain;
   transition: transform 0.5s ease;
 }
 
 .car-card:hover .car-img {
-  transform: translateY(-5px); /* Makes the car "lift" slightly when card is hovered */
+  transform: translateY(-5px); 
 }
 
-
-
-
+/* Porsche Section */
 .porsche-section {
   background: #1a1a4f;
-  padding: 100px 0;
+  padding: 60px 20px;
   text-align: center;
   position: relative;
 }
 
 .porsche-bg-text {
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.5;
   margin-bottom: 20px;
 }
 
-.porsche-logo-main { height: 60px; margin-bottom: 20px; }
-.porsche-title { font-size: 48px; margin-bottom: 60px; letter-spacing: 5px; }
+.porsche-logo-main {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.porsche-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+}
 
 .porsche-interactive {
   position: relative;
-  width: 800px;
-  height: 500px;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
   margin: 0 auto;
 }
 
-.porsche-top-view { width: 300px; z-index: 5; position: relative; }
-
-.radar-circles .circle {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 50%;
-}
-.circle:nth-child(1) { width: 400px; height: 400px; }
-.circle:nth-child(2) { width: 550px; height: 550px; }
-.circle:nth-child(3) { width: 700px; height: 700px; }
-
-.feature-tag {
-  position: absolute;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.feature-tag span {
-  width: 40px; height: 1px; background: white;
-}
-
-.t1 { top: 10%; left: 50px; }
-.t2 { top: 10%; right: 50px; flex-direction: row-reverse; }
-.t3 { top: 40%; left: 0; }
-.t4 { top: 40%; right: 0; flex-direction: row-reverse; }
-.t5 { bottom: 10%; left: 50px; }
-.t6 { bottom: 10%; right: 50px; flex-direction: row-reverse; }
-
-.porsche-btns { margin-top: 50px; display: flex; justify-content: center; gap: 20px; }
-.btn-outline { border: 1px solid var(--primary-orange); color: var(--primary-orange); padding: 12px 25px; text-decoration: none; border-radius: 4px; }
-.porsche-interactive {
-  width: 800px;
-  height: 500px;
+.porsche-top-view {
+  width: 200px;
+  max-width: 100%;
+  z-index: 5;
   position: relative;
 }
+
 .model-viewer {
   position: absolute;
   inset: 0;
@@ -399,37 +347,141 @@ height: 65px;
   z-index: 2;
 }
 
+.radar-circles .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
 
+.circle:nth-child(1) {
+  width: 250px;
+  height: 250px;
+}
+
+.circle:nth-child(2) {
+  width: 350px;
+  height: 350px;
+}
+
+.circle:nth-child(3) {
+  width: 450px;
+  height: 450px;
+}
+
+.feature-tag {
+  position: absolute;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-tag span {
+  width: 30px;
+  height: 1px;
+  background: white;
+}
+
+.t1 { top: 10%; left: 20px; }
+.t2 { top: 10%; right: 20px; flex-direction: row-reverse; }
+.t3 { top: 40%; left: 0; }
+.t4 { top: 40%; right: 0; flex-direction: row-reverse; }
+.t5 { bottom: 10%; left: 20px; }
+.t6 { bottom: 10%; right: 20px; flex-direction: row-reverse; }
+
+.porsche-btns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  border: 1px solid var(--primary-orange);
+  color: var(--primary-orange);
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Stats Bar */
 .stats-bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 50px 80px;
+  padding: 40px 20px;
   background: var(--primary-orange);
+  gap: 30px;
 }
 
-.stat-item h3 { font-size: 36px; }
-.stat-item p { font-size: 14px; }
+.stat-item {
+  text-align: center;
+  min-width: 150px;
+}
 
-.partners-section { padding: 60px 80px; text-align: center; }
-.partners-logos { display: flex; justify-content: center; gap: 50px; align-items: center; margin-top: 40px; }
-.partners-logos img { height: 40px; filter: grayscale(1) brightness(2); }
+.stat-item h3 {
+  font-size: 28px;
+}
 
+.stat-item p {
+  font-size: 13px;
+}
 
+/* Partners Section */
+.partners-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.partners-logos img {
+  height: 30px;
+  filter: grayscale(1) brightness(2);
+}
+
+/* Contact Section */
 .contact-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 100px 80px;
-  gap: 80px;
+  grid-template-columns: 1fr;
+  padding: 60px 20px;
+  gap: 40px;
 }
 
-.contact-info .subtitle { color: var(--primary-orange); letter-spacing: 2px; }
-.contact-info h2 { font-size: 42px; margin: 15px 0; }
-.info-item { margin-top: 30px; }
-.info-item strong { display: block; margin-bottom: 5px; }
+.contact-info .subtitle {
+  color: var(--primary-orange);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+.info-item {
+  margin-top: 25px;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
 
 .contact-form-container {
   background: var(--primary-orange);
-  padding: 50px;
+  padding: 30px;
   border-radius: 10px;
 }
 
@@ -445,20 +497,340 @@ height: 65px;
   border-radius: 5px;
 }
 
-.form-row { display: flex; gap: 15px; }
-.btn-submit { width: 100%; height: 50px; background: var(--dark-blue); border: none; cursor: pointer; border-radius: 25px; }
-
-
-.footer { padding: 40px 80px; border-top: 1px solid rgba(255,255,255,0.1); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; opacity: 0.6; }
-.footer-logo { height: 30px; }
-.footer-links a { color: white; margin-left: 20px; text-decoration: none; }
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .contact-section { grid-template-columns: 1fr; }
-  .porsche-interactive { width: 100%; }
-  .car-card { min-width: 300px; }
-  .hero-title-wrapper { height: 150px; }
-  .outline-text { font-size: 120px; }
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
+
+.form-row > * {
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn-submit {
+  width: 100%;
+  height: 50px;
+  background: var(--dark-blue);
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  opacity: 0.6;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-logo {
+  height: 25px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 768px) {
+  .hero {
+    padding: 30px 60px;
+  }
+
+  .hero-title-wrapper {
+    height: 200px;
+  }
+
+  .outline-text {
+    font-size: 150px;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+
+  .model-wrapper {
+    height: 400px;
+    margin-top: -60px;
+  }
+
+  .service-section {
+    flex-direction: row;
+    align-items: center;
+    padding: 80px 60px;
+  }
+
+  .service-text h2 {
+    font-size: 28px;
+  }
+
+  .service-text p {
+    max-width: 500px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .car-carousel-section {
+    padding: 60px 20px;
+  }
+
+  .car-card {
+    min-width: 350px;
+  }
+
+  .brand-logo {
+    height: 60px;
+  }
+
+  .car-img {
+    height: 200px;
+  }
+
+  .porsche-section {
+    padding: 80px 60px;
+  }
+
+  .porsche-title {
+    font-size: 38px;
+  }
+
+  .porsche-interactive {
+    height: 500px;
+  }
+
+  .porsche-top-view {
+    width: 280px;
+  }
+
+  .circle:nth-child(1) {
+    width: 400px;
+    height: 400px;
+  }
+
+  .circle:nth-child(2) {
+    width: 550px;
+    height: 550px;
+  }
+
+  .circle:nth-child(3) {
+    width: 700px;
+    height: 700px;
+  }
+
+  .feature-tag {
+    font-size: 12px;
+  }
+
+  .feature-tag span {
+    width: 40px;
+  }
+
+  .t1 { left: 50px; }
+  .t2 { right: 50px; }
+  .t5 { left: 50px; }
+  .t6 { right: 50px; }
+
+  .stat-item h3 {
+    font-size: 32px;
+  }
+
+  .stat-item p {
+    font-size: 14px;
+  }
+
+  .partners-logos img {
+    height: 35px;
+  }
+
+  .contact-info h2 {
+    font-size: 36px;
+  }
+
+  .contact-form-container {
+    padding: 40px;
+  }
+
+  .footer {
+    padding: 40px 60px;
+  }
+
+  .footer-logo {
+    height: 28px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 30px 80px;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+
+  .hero-title-wrapper {
+    height: 250px;
+  }
+
+  .outline-text {
+    font-size: 250px;
+  }
+
+  .main-title {
+    font-size: 50px;
+  }
+
+  .model-wrapper {
+    height: 450px;
+    margin-top: -80px;
+  }
+
+  .service-section {
+    padding: 100px 80px;
+  }
+
+  .service-text h2 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 48px;
+    margin-bottom: 45px;
+  }
+
+  .car-carousel-section {
+    padding: 70px 0 80px;
+  }
+
+  .car-card {
+    min-width: 460px;
+    padding: 28px 30px 30px;
+  }
+
+  .brand-logo {
+    height: 65px;
+  }
+
+  .car-card h3 {
+    font-size: 21px;
+  }
+
+  .car-card p {
+    font-size: 14px;
+  }
+
+  .porsche-section {
+    padding: 100px 80px;
+  }
+
+  .porsche-logo-main {
+    height: 60px;
+  }
+
+  .porsche-title {
+    font-size: 48px;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+  }
+
+  .porsche-top-view {
+    width: 300px;
+  }
+
+  .porsche-btns {
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .stats-bar {
+    padding: 50px 80px;
+  }
+
+  .stat-item h3 {
+    font-size: 36px;
+  }
+
+  .partners-section {
+    padding: 60px 80px;
+  }
+
+  .partners-logos {
+    gap: 50px;
+    margin-top: 40px;
+  }
+
+  .partners-logos img {
+    height: 40px;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 80px;
+    gap: 80px;
+  }
+
+  .contact-info h2 {
+    font-size: 42px;
+  }
+
+  .info-item {
+    margin-top: 30px;
+  }
+
+  .contact-form-container {
+    padding: 50px;
+  }
+
+  .footer {
+    padding: 40px 80px;
+  }
+
+  .footer-links a {
+    margin-left: 20px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .carousel-viewport {
+    width: 960px;
+  }
+
+  .cards-wrapper {
+    gap: 40px;
+  }
+
+  .carousel-track {
+    gap: 30px;
+  }
+
+  .arrow-btn {
+    font-size: 42px;
+    padding: 0 25px;
+  }
+}   

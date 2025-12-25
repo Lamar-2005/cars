@@ -18,7 +18,7 @@ modelViewer.addEventListener("load", () => {
         
        
         const modelMap = {
-            'grey': '3d assets/porche model 1.glb', 
+            'grey': '3d assets/tesla model white 1.glb', 
             'red': '3d assets/tesla modell.glb',
             'white': '3d assets/tesla model black.glb'
         };
