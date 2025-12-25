@@ -270,6 +270,57 @@ height: 65px;
   height: 200px;
   object-fit: contain;
 }
+/* Existing card styles with added transition */
+.car-card {
+  background-color: #0d0d2b;
+  width: 460px;
+  padding: 28px 30px 30px;
+  border-radius: 4px;
+  text-align: left;
+  color: white;
+  
+  /* ADD THESE FOR THE HOVER EFFECT */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* THE HOVER EFFECT: Makes the car bigger */
+.car-card:hover {
+  transform: scale(1.05); /* Increases size by 5% */
+  z-index: 10; /* Ensures it stays on top of arrows/other cards */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* BUTTON HOVER EFFECT */
+.explore-btn {
+  width: 34px;
+  height: 34px;
+  background-color: #fff6c7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.explore-btn:hover {
+  background-color: #ff7a00; /* Changes to your theme orange on hover */
+  transform: rotate(-45deg); /* Optional: rotates the arrow slightly like an interaction */
+}
+
+/* Ensure the image inside the card scales nicely */
+.car-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-img {
+  transform: translateY(-5px); /* Makes the car "lift" slightly when card is hovered */
+}
 
 
 
